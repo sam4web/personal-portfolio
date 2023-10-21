@@ -7,13 +7,9 @@ const Hero = () => {
       <div className='section-container'>
         <p className='desc info'>Hello, I&#39;m Sam</p>
         <h1 className='title'>
+          I&#39;m a{' '}
           <TypeAnimation
-            sequence={[
-              "I'm a Web Developer.",
-              1500,
-              "I'm a UI/UX Designer.",
-              1500,
-            ]}
+            sequence={['Web Developer.', 1500, 'UI/UX Designer.', 1500]}
             wrapper='span'
             speed={50}
             repeat={Infinity}

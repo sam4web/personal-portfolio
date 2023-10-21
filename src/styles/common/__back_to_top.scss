@@ -1,26 +1,26 @@
 .back-to-top {
-  display: none;
+  transform: translateX(100px);
 
-  .container {
-    @include flex(center, center);
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    color: $primary-color;
-    border: 2px solid $primary-color;
-    border-radius: 40px;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: transparent;
-
-    &:hover {
-      background-color: $primary-color;
-      color: $white;
-    }
+  &__active {
+    transform: translateX(0);
   }
 
-  i {
-    font-size: 20px;
+  @include flex(center, center);
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border: 2px solid $primary-color;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  background-color: $primary-color;
+  color: $white;
+  transition: $global-transition;
+  font-size: 15px;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary-color;
   }
 }

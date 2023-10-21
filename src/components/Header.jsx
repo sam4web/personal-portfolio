@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link, animateScroll } from 'react-scroll';
 import { navLinks } from '../constants';
 
 const Header = () => {
@@ -29,12 +30,18 @@ const Header = () => {
       ${headerScrollActive ? 'header-scroll-active' : ''}`}
     >
       <div className='section-container'>
-        <h3 className='logo'>
-          <a href='/'>
-            <span>S</span>
-            am4Web
-            <span>.</span>
-          </a>
+        <h3
+          className='logo'
+          onClick={() => {
+            animateScroll.scrollToTop({
+              duration: 0,
+              smooth: true,
+            });
+          }}
+        >
+          <span>S</span>
+          am4Web
+          <span>.</span>
         </h3>
         {/* logo */}
 
@@ -42,9 +49,17 @@ const Header = () => {
           <ul className='nav-list'>
             {navLinks.map((link, idx) => (
               <li className='nav-item' key={idx}>
-                <a href={`#${link.id}`} className='nav-link'>
+                <Link
+                  className='nav-link'
+                  activeClass='nav-link__active'
+                  to={link.id}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={10}
+                >
                   {link.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

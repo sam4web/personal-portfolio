@@ -1,16 +1,25 @@
-import { About, Contact, Footer, Header, Hero, Projects } from './components';
+import {
+  About,
+  BackToTop,
+  Contact,
+  Footer,
+  Header,
+  Hero,
+  Projects,
+} from './components';
 
 const App = () => {
   return (
     <>
+      <Header />
       <main>
-        <Header />
         <Hero />
         <About />
         <Projects />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
+      <BackToTop />
     </>
   );
 };

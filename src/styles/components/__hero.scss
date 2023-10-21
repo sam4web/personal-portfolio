@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  @include parallex-bg(rgba(245, 245, 245, 0.75), '../assets/hero-bg.svg');
+  @include parallex-bg(rgba(245, 245, 245, 0.7), '../assets/hero-bg.svg');
   @include flex;
 
   .section-container {
@@ -14,6 +14,14 @@
     line-height: 40px;
     margin: 32px 0;
     color: $primary-dark;
+
+    span {
+      color: $primary-color;
+
+      &::after {
+        color: $primary-dark;
+      }
+    }
 
     @include responsive-medium {
       font-size: 45px;
