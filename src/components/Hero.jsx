@@ -1,5 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import resumeDoc from '../assets/resume.pdf';
+import { FaChevronDown } from 'react-icons/fa6';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
@@ -20,7 +22,7 @@ const Hero = () => {
           small. Let me turn your ideas into reality!
         </p>
 
-        <button className='btn'>
+        <button className='btn btn-transparent'>
           <a
             href={resumeDoc}
             download='Sijal Manandhar Resume'
@@ -32,9 +34,19 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className='mouse-scroll-animation'>
-        <div className='dot'></div>
-      </div>
+      <Link
+        className='nav-link'
+        activeClass='nav-link__active'
+        to='about'
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={10}
+      >
+        <button className='arrow-down'>
+          <FaChevronDown />
+        </button>
+      </Link>
       {/* mouse-scroll-animation */}
     </section>
   );

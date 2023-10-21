@@ -9,7 +9,7 @@ $global-transition: 150ms color linear, 200ms background-color ease-in-out,
   transition: $global-transition;
 
   &::selection {
-    background-color: $primary-light;
+    background-color: $primary-color;
     color: $white;
   }
 }

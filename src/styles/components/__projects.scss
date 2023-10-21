@@ -74,7 +74,7 @@
           transition: $global-transition;
 
           &:hover {
-            color: $primary-light;
+            color: $primary-color;
           }
         }
       }
@@ -113,7 +113,7 @@
       &:hover {
         &::before,
         &::after {
-          color: $primary-light;
+          color: $primary-color;
         }
       }
 

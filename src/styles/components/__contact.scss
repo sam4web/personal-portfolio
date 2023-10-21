@@ -25,7 +25,7 @@
   label {
     font-size: 15px;
     font-weight: 600;
-    color: $primary-grey;
+    color: $dark-grey;
     display: inline-block;
     margin-bottom: 5px;
     transition: $global-transition;
@@ -60,7 +60,7 @@
     }
 
     &:focus {
-      border-color: $primary-light;
+      border-color: $primary-color;
       background-color: $white;
 
       &::placeholder {
