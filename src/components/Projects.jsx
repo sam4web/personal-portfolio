@@ -14,7 +14,7 @@ const Projects = () => {
         <a
           target='_blank'
           href='https://sam4web.github.io/web-projects/'
-          className='button'
+          className='btn'
           rel='noreferrer'
         >
           View More

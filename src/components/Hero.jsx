@@ -1,17 +1,39 @@
-/* eslint-disable react/no-unescaped-entities */
+import { TypeAnimation } from 'react-type-animation';
+import resumeDoc from '../assets/resume.pdf';
+
 const Hero = () => {
   return (
     <section className='hero'>
       <div className='section-container'>
-        <p className='desc'>Hello, I'm Sam</p>
-        <h1 className='title'>Hey! I'm Sijal Manandhar</h1>
+        <p className='desc info'>Hello, I&#39;m Sam.</p>
+        <h1 className='title'>
+          <TypeAnimation
+            sequence={[
+              "I'm a Web Developer.",
+              1500,
+              "I'm a UI/UX Designer.",
+              1500,
+            ]}
+            wrapper='span'
+            speed={50}
+            repeat={Infinity}
+          />
+        </h1>
         <p className='desc'>
-          A Frontend focused <strong> Web Developer </strong> designing and
-          developing front-end of Websites and Web Applications.
+          I create user-friendly websites for all kinds of businesses, big or
+          small. Let me turn your ideas into reality!
         </p>
-        <a href='#projects' className='button'>
-          Projects
-        </a>
+
+        <button className='btn'>
+          <a
+            href={resumeDoc}
+            download='Sijal Manandhar Resume'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Download CV
+          </a>
+        </button>
       </div>
 
       <div className='mouse-scroll-animation'>

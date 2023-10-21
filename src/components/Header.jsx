@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { navLinks } from '../constants';
 
 const Header = () => {
   const [headerToggleActive, setHeaderToggleActive] = useState(false);
@@ -29,32 +29,24 @@ const Header = () => {
       ${headerScrollActive ? 'header-scroll-active' : ''}`}
     >
       <div className='section-container'>
-        <div className='logo'>
+        <h3 className='logo'>
           <a href='/'>
             <span>S</span>
             am4Web
             <span>.</span>
           </a>
-        </div>
+        </h3>
         {/* logo */}
 
         <nav className='nav'>
           <ul className='nav-list'>
-            <li className='nav-item'>
-              <a href='#about' className='nav-link'>
-                About
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href='#projects' className='nav-link'>
-                Projects
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href='#contact' className='nav-link'>
-                Contact
-              </a>
-            </li>
+            {navLinks.map((link, idx) => (
+              <li className='nav-item' key={idx}>
+                <a href={`#${link.id}`} className='nav-link'>
+                  {link.title}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
         {/* nav */}

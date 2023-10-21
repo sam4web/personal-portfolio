@@ -45,7 +45,7 @@ const Contact = () => {
             </div>
             {/* input-container */}
 
-            <input type='submit' value='Submit' className='button' />
+            <input type='submit' value='Submit' className='btn' />
           </form>
           {/* form */}
         </div>

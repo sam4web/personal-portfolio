@@ -1,4 +1,10 @@
-// styles for header
+@mixin header-scroll-styles {
+  background-color: rgba($color: #fff, $alpha: 0.95);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 1px 2px;
+  padding: 25px 30px;
+  border-radius: 0 0 10px 10px;
+}
+
 .header {
   z-index: 100;
   position: fixed;
@@ -19,13 +25,12 @@
   .section-container {
     @include flex;
     text-align: left;
-    padding: 30px 25px;
-
     margin: auto;
     transition: padding 200ms linear;
 
     @include responsive_medium {
-      padding: 25px;
+      @include header-scroll-styles;
+      padding: 25px 25px !important;
     }
   }
 
@@ -35,7 +40,6 @@
     cursor: pointer;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-
     user-select: none;
 
     @include responsive_medium {
@@ -70,7 +74,11 @@
       color: $pri_dark;
       font-weight: 500;
       position: relative;
-      font-size: 18px;
+      font-size: 20px;
+
+      @include responsive_medium {
+        font-size: 18px;
+      }
 
       &::after {
         content: '';
@@ -101,8 +109,8 @@
     display: none;
     background-color: transparent;
     position: fixed;
-    top: 30px;
-    right: 20px;
+    top: 35px;
+    right: 25px;
 
     @include responsive_small {
       display: inline-block;
@@ -150,7 +158,6 @@
   .section-container {
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 0 !important;
   }
 
   .nav {
@@ -193,13 +200,6 @@
   }
 }
 
-.header-scroll-active {
-  .section-container {
-    background-color: rgba($color: #fff, $alpha: 0.95);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 1px 2px;
-
-    padding: 25px 30px;
-    padding-bottom: 15px;
-    border-radius: 0 0 15px 15px;
-  }
+.header-scroll-active .section-container {
+  @include header-scroll-styles;
 }

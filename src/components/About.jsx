@@ -31,12 +31,12 @@ const About = () => {
               <strong> contact </strong> me.
             </p>
             {/* content-paragraph */}
-            <a href='#contact' className='button'>
+            <a href='#contact' className='btn'>
               Contact
             </a>
             <a
               href='https://resume.io/r/8tuDJbCVV'
-              className='button button-transparent'
+              className='btn btn-transparent'
               target='_blank'
               rel='noreferrer'
             >
