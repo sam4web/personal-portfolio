@@ -9,7 +9,7 @@ $global-transition: 150ms color linear, 200ms background-color ease-in-out,
   transition: $global-transition;
 
   &::selection {
-    background-color: $pri_light;
+    background-color: $primary-light;
     color: $white;
   }
 }
@@ -24,7 +24,7 @@ h3,
 h4 {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  color: $pri_dark;
+  color: $primary-dark;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
   line-height: 24px;
   font-family: 'Poppins', sans-serif;
 
-  @include responsive_medium {
+  @include responsive-medium {
     font-size: 16px;
   }
 }

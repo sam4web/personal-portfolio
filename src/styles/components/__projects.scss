@@ -1,11 +1,11 @@
 .project {
   .project-container {
-    // margin-top: 60px;
     @include assign-value(margin-top margin-bottom, 60px);
+
     @include grid(40px);
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
-    @include responsive_small {
+    @include responsive-small {
       grid-template-columns: 1fr;
     }
   }
@@ -19,7 +19,7 @@
     &:hover {
       .project-item__title {
         a {
-          color: $pri_color;
+          color: $primary-color;
         }
 
         &::before,
@@ -53,7 +53,7 @@
       border-radius: 10px;
       position: relative;
 
-      @include responsive_small {
+      @include responsive-small {
         height: 200px;
       }
 
@@ -70,11 +70,11 @@
         a {
           margin: 0 15px;
           font-size: 20px;
-          color: $pri_color;
+          color: $primary-color;
           transition: $global-transition;
 
           &:hover {
-            color: $pri_light;
+            color: $primary-light;
           }
         }
       }
@@ -107,13 +107,13 @@
       transition: $global-transition;
 
       a {
-        color: $pri_dark;
+        color: $primary-dark;
       }
 
       &:hover {
         &::before,
         &::after {
-          color: $pri_light;
+          color: $primary-light;
         }
       }
 

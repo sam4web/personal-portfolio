@@ -1,7 +1,7 @@
 // styles for footer section
 
 .footer {
-  background-color: $pri_dark;
+  background-color: $primary-dark;
   color: $white;
 
   .section-container {
@@ -16,7 +16,7 @@
     align-items: flex-start;
     padding-bottom: 40px;
 
-    @include responsive_small {
+    @include responsive-small {
       display: block;
 
       .info-container {
@@ -31,14 +31,14 @@
 
   .info-container {
     flex-basis: 380px;
-    @include responsive_medium {
+    @include responsive-medium {
       flex-basis: 300px;
     }
   }
 
   .social-container {
     flex-basis: 200px;
-    @include responsive_medium {
+    @include responsive-medium {
       flex-basis: 150px;
     }
   }
@@ -62,7 +62,7 @@
       color: $white;
 
       &:hover {
-        color: $pri_light;
+        color: $primary-light;
       }
       i {
         font-size: 22px;
@@ -85,7 +85,7 @@
       font-weight: 600;
 
       &:hover {
-        color: $pri_light;
+        color: $primary-light;
       }
     }
   }

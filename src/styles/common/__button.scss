@@ -1,7 +1,7 @@
 .btn {
   cursor: pointer;
   display: inline-block;
-  background-color: $pri_color;
+  background-color: $primary-color;
   padding: 12px 30px;
   border-radius: 5px;
   border: 2px solid transparent;
@@ -17,20 +17,20 @@
 
   &:hover,
   &-transparent {
-    border-color: $pri_color;
+    border-color: $primary-color;
     background-color: #ffffff80;
     transform: translateY(-5px);
 
     a {
-      color: $pri_color;
+      color: $primary-color;
     }
   }
 
-  @include responsive_medium {
+  @include responsive-medium {
     padding: 10px 20px;
   }
 
-  @include responsive_small {
+  @include responsive-small {
     padding: 5px 15px;
   }
 

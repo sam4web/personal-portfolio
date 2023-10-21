@@ -25,13 +25,13 @@
   label {
     font-size: 15px;
     font-weight: 600;
-    color: $pri_grey;
+    color: $primary-grey;
     display: inline-block;
     margin-bottom: 5px;
     transition: $global-transition;
 
     &:hover {
-      color: $pri_color;
+      color: $primary-color;
     }
   }
 
@@ -51,7 +51,7 @@
     font-family: 'Poppins', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 
-    @include responsive_small {
+    @include responsive-small {
       @include assign-value(padding-top padding-bottom, 10px);
     }
 
@@ -60,7 +60,7 @@
     }
 
     &:focus {
-      border-color: $pri_light;
+      border-color: $primary-light;
       background-color: $white;
 
       &::placeholder {
@@ -78,7 +78,7 @@
   input[type='submit'] {
     @include assign-value(padding-left padding-right, 50px);
 
-    @include responsive_medium {
+    @include responsive-medium {
       @include assign-value(padding-left padding-right, 30px);
     }
   }

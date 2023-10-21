@@ -6,19 +6,19 @@
   padding: 35px 20px;
   text-align: center;
 
-  @include responsive_medium {
+  @include responsive-medium {
     padding: 20px 15px;
   }
 
   &:hover .section-title::after {
     width: 40%;
-    background-color: $pri_color;
+    background-color: $primary-color;
   }
 
   .section-title {
     margin-top: 55px;
     margin-bottom: 45px;
-    color: $pri_dark;
+    color: $primary-dark;
     font-size: 35px;
     position: relative;
     display: inline-block;
@@ -32,15 +32,15 @@
       width: 20%;
       height: 4.5px;
       border-radius: 40px;
-      background-color: $pri_light;
+      background-color: $primary-light;
       transition: $global-transition;
 
-      @include responsive_medium {
-        background-color: $pri_color;
+      @include responsive-medium {
+        background-color: $primary-color;
       }
     }
 
-    @include responsive_medium {
+    @include responsive-medium {
       font-size: 30px;
       margin-bottom: 35px;
 
@@ -55,9 +55,9 @@
     width: 100%;
     margin: 0 auto;
     margin-bottom: 35px;
-    color: $pri_grey;
+    color: $primary-grey;
 
-    @include responsive_medium {
+    @include responsive-medium {
       max-width: 450px;
     }
   }

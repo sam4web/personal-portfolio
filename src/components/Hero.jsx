@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className='hero'>
       <div className='section-container'>
-        <p className='desc info'>Hello, I&#39;m Sam.</p>
+        <p className='desc info'>Hello, I&#39;m Sam</p>
         <h1 className='title'>
           <TypeAnimation
             sequence={[
