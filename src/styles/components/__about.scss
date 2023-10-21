@@ -1,0 +1,99 @@
+.about {
+  .content-container {
+    margin-top: 60px !important;
+    text-align: left;
+    @include grid(70px);
+    grid-template-columns: 1fr 0.95fr;
+
+    @include responsive_large {
+      text-align: justify;
+      gap: 40px;
+    }
+
+    @include responsive_medium {
+      grid-template-columns: 1fr;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto;
+      gap: 60px;
+    }
+
+    @include responsive_small {
+      font-size: 15px;
+
+      .content-main {
+        text-align: center;
+      }
+    }
+  }
+
+  .button-transparent {
+    margin-left: 10px;
+  }
+
+  .content-title {
+    font-size: 27px;
+    margin-bottom: 30px;
+
+    @include responsive_medium {
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .content-main__para {
+    color: $pri_grey;
+    margin-bottom: 10px;
+    text-align: left;
+
+    a,
+    strong {
+      font-weight: 700;
+    }
+
+    a {
+      color: $pri_color;
+      text-decoration: underline;
+    }
+  }
+
+  .skill-container {
+    @include flex(flex-start);
+    margin-top: 5px;
+    flex-wrap: wrap;
+
+    @include responsive_small {
+      justify-content: center;
+    }
+
+    .skill {
+      font-family: 'Poppins', sans-serif;
+      color: $pri_grey;
+      background-color: #d6d6d6;
+      padding: 10px 15px;
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+      @include assign-value(margin-right margin-bottom, 13px);
+      transition: $global-transition;
+
+      &:hover {
+        background-color: $pri_light;
+        color: $pri_dark;
+      }
+
+      @include responsive_large {
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 20px;
+
+    @include responsive_small {
+      margin-top: 10px;
+    }
+  }
+}

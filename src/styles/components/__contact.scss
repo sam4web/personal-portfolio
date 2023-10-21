@@ -1,0 +1,85 @@
+.contact {
+  @include parallex-bg(#f5f5f5b3, '../assets/hero-bg.svg');
+
+  .section-container {
+    max-width: 950px;
+    padding-bottom: 70px;
+  }
+
+  .form-container {
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 35px 20px;
+    padding-bottom: 30px;
+  }
+
+  .input-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 600;
+    color: $pri_grey;
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: $global-transition;
+
+    &:hover {
+      color: $pri_color;
+    }
+  }
+
+  input:not([type='submit']),
+  textarea {
+    cursor: text;
+    display: block;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    outline: none;
+    transition: $global-transition;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+    @include responsive_small {
+      @include assign-value(padding-top padding-bottom, 10px);
+    }
+
+    &::placeholder {
+      transition: inherit;
+    }
+
+    &:focus {
+      border-color: $pri_light;
+      background-color: $white;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 60px;
+    height: 250px;
+  }
+
+  input[type='submit'] {
+    @include assign-value(padding-left padding-right, 50px);
+
+    @include responsive_medium {
+      @include assign-value(padding-left padding-right, 30px);
+    }
+  }
+}

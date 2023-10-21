@@ -1,0 +1,26 @@
+.back-to-top {
+  display: none;
+
+  .container {
+    @include flex(center, center);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: $pri_color;
+    border: 2px solid $pri_color;
+    border-radius: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $pri_color;
+      color: $white;
+    }
+  }
+
+  i {
+    font-size: 20px;
+  }
+}

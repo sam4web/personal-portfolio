@@ -1,0 +1,64 @@
+.section-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1vh;
+  padding: 35px 20px;
+  text-align: center;
+
+  @include responsive_medium {
+    padding: 20px 15px;
+  }
+
+  &:hover .section-title::after {
+    width: 40%;
+    background-color: $pri_color;
+  }
+
+  .section-title {
+    margin-top: 55px;
+    margin-bottom: 45px;
+    color: $pri_dark;
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 4.5px;
+      border-radius: 40px;
+      background-color: $pri_light;
+      transition: $global-transition;
+
+      @include responsive_medium {
+        background-color: $pri_color;
+      }
+    }
+
+    @include responsive_medium {
+      font-size: 30px;
+      margin-bottom: 35px;
+
+      &::after {
+        bottom: -20px;
+      }
+    }
+  }
+
+  .section-subtitle {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    color: $pri_grey;
+
+    @include responsive_medium {
+      max-width: 450px;
+    }
+  }
+}
