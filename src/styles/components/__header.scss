@@ -3,8 +3,7 @@
   z-index: 100;
   position: fixed;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  background-color: rgba(255, 255, 255, 0.9);
+  transition: $global-transition;
 
   &::after {
     content: '';
@@ -20,30 +19,32 @@
   .section-container {
     @include flex;
     text-align: left;
-    padding: 20px;
+    padding: 30px 25px;
+
     margin: auto;
     transition: padding 200ms linear;
 
     @include responsive_medium {
-      padding: 15px;
+      padding: 25px;
     }
   }
 
   .logo a {
     font-size: 40px;
-    font-weight: 600;
     color: $pri_dark;
     cursor: pointer;
-    font-family: 'Edu QLD Beginner', cursive;
-    transition: $global-transition, font-size 200ms linear;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+
     user-select: none;
 
-    &:hover {
-      color: $pri_color;
+    @include responsive_medium {
+      font-size: 34px;
     }
 
-    @include responsive_medium {
-      font-size: 30px;
+    span {
+      color: $pri_color;
+      font-weight: 800;
     }
   }
 
@@ -65,10 +66,11 @@
     }
 
     &-link {
-      padding: 5px;
+      padding: 7px;
       color: $pri_dark;
       font-weight: 500;
       position: relative;
+      font-size: 18px;
 
       &::after {
         content: '';
@@ -95,17 +97,19 @@
   }
 
   .toggle-btn {
+    border: none;
     display: none;
+    background-color: transparent;
     position: fixed;
     top: 30px;
     right: 20px;
 
     @include responsive_small {
-      display: block;
+      display: inline-block;
     }
 
     .bar {
-      width: 25px;
+      width: 27px;
       height: 2.5px;
       border-radius: 70px;
       background-color: $pri_dark;
@@ -121,21 +125,26 @@
         background-color: inherit;
         border-radius: inherit;
         transition: inherit;
+        left: 0;
       }
 
       &::before {
-        bottom: 7px;
+        bottom: 8px;
       }
       &::after {
-        top: 7px;
+        top: 8px;
       }
     }
   }
 }
 
 .header-toggle-active {
+  height: 100vh;
+  background-color: #fff;
+
   &::after {
     width: 100%;
+    height: 5px;
   }
 
   .section-container {
@@ -145,19 +154,23 @@
   }
 
   .nav {
-    display: block;
+    width: 100%;
+    display: flex;
+    height: 100vh;
 
     &-list {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       margin: 15px auto;
     }
 
     &-item {
-      margin: 8px 0;
+      margin: 40px 0;
     }
 
     &-link {
-      padding: 10px 0 !important;
+      font-size: 26px;
 
       &::after {
         display: none !important;
@@ -182,18 +195,11 @@
 
 .header-scroll-active {
   .section-container {
-    padding: 15px;
-  }
+    background-color: rgba($color: #fff, $alpha: 0.95);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 1px 2px;
 
-  .logo a {
-    font-size: 35px;
-  }
-
-  .nav-link {
-    padding: 0 5px;
-
-    &::after {
-      bottom: -3px;
-    }
+    padding: 25px 30px;
+    padding-bottom: 15px;
+    border-radius: 0 0 15px 15px;
   }
 }

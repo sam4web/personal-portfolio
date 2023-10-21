@@ -3,6 +3,7 @@ const Hero = () => {
   return (
     <section className='hero'>
       <div className='section-container'>
+        <p className='desc'>Hello, I'm Sam</p>
         <h1 className='title'>Hey! I'm Sijal Manandhar</h1>
         <p className='desc'>
           A Frontend focused <strong> Web Developer </strong> designing and
