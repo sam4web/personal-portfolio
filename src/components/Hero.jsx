@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import resumeDoc from '../assets/resume.pdf';
+import { resumeDoc } from '../assets';
 import { FaChevronDown } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
 
@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className='hero'>
       <div className='section-container'>
-        <p className='desc info'>Hello, I&#39;m Sam</p>
+        <p className='desc'>Hello, I&#39;m Sam</p>
         <h1 className='title'>
           I&#39;m a{' '}
           <TypeAnimation

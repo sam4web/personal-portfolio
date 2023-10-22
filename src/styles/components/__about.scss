@@ -1,100 +1,118 @@
 .about {
-  .content-container {
-    margin-top: 60px !important;
-    text-align: left;
-    @include grid(70px);
-    grid-template-columns: 1fr 0.95fr;
+  background-color: $section-grey;
 
-    @include responsive-large {
-      text-align: justify;
-      gap: 40px;
-    }
+  .content-container {
+    @include grid(60px);
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px !important;
+    text-align: left;
+    margin-bottom: 35px;
 
     @include responsive-medium {
       grid-template-columns: 1fr;
-      text-align: left;
+      grid-template-rows: repeat(2, 1fr);
       max-width: 500px;
       margin: 0 auto;
-      gap: 60px;
+    }
+  }
+
+  .line-break {
+    width: 100%;
+    margin: 23px 0;
+  }
+
+  .content__image {
+    width: 100%;
+    border-radius: 8px;
+    background-position: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .content__info {
+    @include flex(flex-start, flex-start);
+    padding: 20px 0;
+    flex-direction: column;
+
+    &-title {
+      font-size: 34px;
+      line-height: 42px;
+      font-weight: 600;
     }
 
-    @include responsive-small {
-      font-size: 15px;
+    &-subtitle {
+      font-weight: 500;
+      font-size: 20px;
 
-      .content-main {
-        text-align: center;
+      span {
+        color: $primary-color;
       }
     }
-  }
 
-  .btn-transparent {
-    margin-left: 10px;
-  }
-
-  .content-title {
-    font-size: 27px;
-    margin-bottom: 30px;
-
-    @include responsive-medium {
-      font-size: 23px;
-      margin-bottom: 15px;
-    }
-  }
-
-  .content-main__para {
-    color: $dark-grey;
-    margin-bottom: 10px;
-    text-align: left;
-
-    a,
-    strong {
-      font-weight: 700;
-    }
-
-    a {
-      color: $primary-color;
-      text-decoration: underline;
-    }
-  }
-
-  .skill-container {
-    @include flex(flex-start);
-    margin-top: 5px;
-    flex-wrap: wrap;
-
-    @include responsive-small {
-      justify-content: center;
-    }
-
-    .skill {
-      font-family: 'Poppins', sans-serif;
-      color: $dark-grey;
-      background-color: #d6d6d6;
-      padding: 10px 15px;
-      font-weight: 500;
+    &-desc {
       font-size: 16px;
-      border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-      @include assign-value(margin-right margin-bottom, 13px);
+      line-height: 24px;
+      color: $dark-grey;
+      margin-top: 5px;
+    }
+  }
 
-      transition: $global-transition;
+  .social-icons {
+    margin-top: 10px;
+    @include flex;
+    gap: 13px;
+
+    li a {
+      color: $light-grey;
+      font-size: 24px;
+      display: inline-block;
 
       &:hover {
-        background-color: $primary-color;
-        color: $primary-dark;
-      }
-
-      @include responsive-large {
-        padding: 5px 10px;
+        color: $primary-color;
+        transform: translateY(-5px);
       }
     }
   }
 
-  .btn {
-    margin-top: 20px;
+  .content-info__section {
+    width: 100%;
 
-    @include responsive-small {
-      margin-top: 10px;
+    &-top {
+      @include flex(flex-start, flex-start);
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    &-title {
+      font-size: 23px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &-bottom {
+      div {
+        @include grid(0, space-between);
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 15px;
+
+        li {
+          padding: 6px 0;
+
+          span {
+            color: $dark-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .skills-container__title {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 700;
+
+    @include responsive-medium {
+      font-size: 30px;
     }
   }
 }

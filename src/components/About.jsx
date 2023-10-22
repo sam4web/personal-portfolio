@@ -1,58 +1,107 @@
-/* eslint-disable react/no-unescaped-entities */
+import { aboutImage } from '../assets';
+import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi';
+
 const About = () => {
   return (
     <section className='about' id='about'>
       <div className='section-container'>
+        <p className='section-subtitle'>Get to know me</p>
         <h2 className='section-title'>About Me</h2>
-        <p className='section-subtitle'>
+        <p className='section-desc'>
           Here you will find more information about me and my current skills
           mostly in terms of programming and technology
         </p>
 
         <div className='content-container'>
-          <div className='content-main'>
-            <h3 className='content-title'>Get to know me !</h3>
-            <p className='content-main__para'>
-              I'm a self-taught <strong> Frontend Web Developer </strong> with
-              1.5+ years of experience on designing and developing front-end of
-              websites and web applications. You can check out some of my
-              previous work in the <strong> Projects </strong> section.
-            </p>
-            {/* content-paragraph */}
-            <p className='content-main__para'>
-              Currently I'm trying to find a great working environment to
-              improve my skills and learn more.
-            </p>
-            {/* content-paragraph */}
-            <p className='content-main__para'>
-              I'm available to <strong> Job </strong> opportunities where I can
-              contribute, learn and grow. If you have a good opportunity that
-              matches my skills and experience then don't hesitate to
-              <strong> contact </strong> me.
-            </p>
-            {/* content-paragraph */}
-            <a href='#contact' className='btn'>
-              Contact
-            </a>
-            <a
-              href='https://resume.io/r/8tuDJbCVV'
-              className='btn btn-transparent'
-              target='_blank'
-              rel='noreferrer'
-            >
-              View Resume
-            </a>
-          </div>
-          {/* content-main */}
+          <div
+            className='content__image'
+            style={{ backgroundImage: `url(${aboutImage})` }}
+          ></div>
+          {/* /content-image */}
+          <div className='content__info'>
+            <div className='content-info__section content-info__section-top'>
+              <h3 className='content__info-title'>Sijal Manandhar</h3>
+              <h4 className='content__info-subtitle'>
+                A <span>Frontend</span> web developer based in{' '}
+                <span>Nepal</span>
+              </h4>
+              <p className='content__info-desc'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                eius, harum neque maxime ratione inventore obcaecati velit
+                sapiente mollitia pariatur ipsam impedit quisquam. Ea inventore
+                voluptatibus est repellendus, magnam animi, tempora corrupti
+                iure numquam laudantium quisquam ipsum commodi? Beatae,
+                sapiente?
+              </p>
+              {/* /info-desc */}
+              <ul className='social-icons'>
+                <li>
+                  <a href=''>
+                    <FiFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a href=''>
+                    <FiInstagram />
+                  </a>
+                </li>
+                <li>
+                  <a href=''>
+                    <FiLinkedin />
+                  </a>
+                </li>
+              </ul>
+              {/* /social-icons */}
+            </div>
+            {/* content-info__section */}
 
-          <div className='content-skill'>
-            <h3 className='content-title'>My Skills</h3>
-            <ul className='skill-container'></ul>
-            {/* skill-container */}
+            <hr className='line-break' />
+
+            <div className='content-info__section content-info__section-bottom'>
+              <h4 className='content-info__section-title'>Personal Info</h4>
+              <div>
+                <ul>
+                  <li>
+                    <span>Name: </span> John Smith
+                  </li>
+                  <li>
+                    <span>Age: </span> 21 Years
+                  </li>
+                  <li>
+                    <span>Nationality: </span> USA
+                  </li>
+                  <li>
+                    <span>Freelance: </span> Available
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <span>Address: </span> H-400 - Path2UK
+                  </li>
+                  <li>
+                    <span>Phone: </span> +12345667
+                  </li>
+                  <li>
+                    <span>Email: </span> yourmail@gmail.com
+                  </li>
+
+                  <li>
+                    <span>Languages: </span> French, English
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          {/* content-skill */}
+          {/* /contact-info */}
         </div>
-        {/* content-container */}
+        {/* /content-container */}
+
+        <div className='skills-container'>
+          <div className='skills-container__title'>My Skills</div>
+          <ul>
+            <li></li>
+          </ul>
+        </div>
       </div>
       {/* section-container */}
     </section>
