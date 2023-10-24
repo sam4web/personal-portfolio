@@ -22,7 +22,7 @@ const Hero = () => {
           small. Let me turn your ideas into reality!
         </p>
 
-        <button className='btn btn-transparent'>
+        <button className='btn'>
           <a
             href={resumeDoc}
             download='Sijal Manandhar Resume'

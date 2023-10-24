@@ -1,5 +1,6 @@
 import { aboutImage } from '../assets';
-import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi';
+import { createSocialIcon } from '../utils';
+import { socialInfo } from '../data';
 
 const About = () => {
   return (
@@ -35,21 +36,13 @@ const About = () => {
               </p>
               {/* /info-desc */}
               <ul className='social-icons'>
-                <li>
-                  <a href=''>
-                    <FiFacebook />
-                  </a>
-                </li>
-                <li>
-                  <a href=''>
-                    <FiInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a href=''>
-                    <FiLinkedin />
-                  </a>
-                </li>
+                {socialInfo.map((social) => (
+                  <li key={social.id}>
+                    <a href={social.url} title={social.title}>
+                      {createSocialIcon(social.icon)}
+                    </a>
+                  </li>
+                ))}
               </ul>
               {/* /social-icons */}
             </div>
