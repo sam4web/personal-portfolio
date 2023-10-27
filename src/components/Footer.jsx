@@ -1,3 +1,6 @@
+import { createSocialIcon } from '../utils';
+import { socialInfo } from '../db/data.json';
+
 const Footer = () => {
   return (
     <footer className='footer'>
@@ -14,7 +17,15 @@ const Footer = () => {
 
           <div className='social-container'>
             <h3 className='footer-title'>Social</h3>
-            <ul className='social-list'></ul>
+            <ul className='social-icons'>
+              {socialInfo.map((social) => (
+                <li key={social.id}>
+                  <a href={social.url} title={social.title}>
+                    {createSocialIcon(social.icon)}
+                  </a>
+                </li>
+              ))}
+            </ul>
             {/* social-list */}
           </div>
           {/* social-container */}

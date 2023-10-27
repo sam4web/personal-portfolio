@@ -56,23 +56,6 @@
     }
   }
 
-  .social-icons {
-    margin-top: 10px;
-    @include flex;
-    gap: 13px;
-
-    li a {
-      color: $light-grey;
-      font-size: 24px;
-      display: inline-block;
-
-      &:hover {
-        color: $primary-color;
-        transform: translateY(-5px);
-      }
-    }
-  }
-
   .content-info__section {
     width: 100%;
 
@@ -99,19 +82,45 @@
 
           span {
             color: $dark-grey;
+            text-transform: capitalize;
           }
         }
       }
     }
   }
 
-  .skills-container__title {
-    font-size: 34px;
-    line-height: 42px;
-    font-weight: 700;
+  .skills-container {
+    .skills-container__title {
+      font-size: 34px;
+      line-height: 42px;
+      font-weight: 700;
 
-    @include responsive-medium {
-      font-size: 30px;
+      @include responsive-medium {
+        font-size: 30px;
+      }
+    }
+
+    .skills-list {
+      @include flex(flex-start);
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      &__item {
+        padding: 0 5px;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-8px);
+        }
+      }
+
+      .skill-image {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
 }

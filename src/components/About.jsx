@@ -1,8 +1,11 @@
 import { aboutImage } from '../assets';
 import { createSocialIcon } from '../utils';
-import { socialInfo } from '../db/data.json';
+import { socialInfo, personalInfo as infoArr, skills } from '../db/data.json';
 
 const About = () => {
+  const infoChunk1 = infoArr.slice(0, infoArr.length / 2);
+  const infoChunk2 = infoArr.slice(infoArr.length / 2, infoArr.length);
+
   return (
     <section className='about' id='about'>
       <div className='section-container'>
@@ -55,33 +58,18 @@ const About = () => {
               <h4 className='content-info__section-title'>Personal Info</h4>
               <div>
                 <ul>
-                  <li>
-                    <span>Name: </span> John Smith
-                  </li>
-                  <li>
-                    <span>Age: </span> 21 Years
-                  </li>
-                  <li>
-                    <span>Nationality: </span> USA
-                  </li>
-                  <li>
-                    <span>Freelance: </span> Available
-                  </li>
+                  {infoChunk1.map((info) => (
+                    <li key={info.id}>
+                      <span>{info.title}: </span> {info.detail}
+                    </li>
+                  ))}
                 </ul>
                 <ul>
-                  <li>
-                    <span>Address: </span> H-400 - Path2UK
-                  </li>
-                  <li>
-                    <span>Phone: </span> +12345667
-                  </li>
-                  <li>
-                    <span>Email: </span> yourmail@gmail.com
-                  </li>
-
-                  <li>
-                    <span>Languages: </span> French, English
-                  </li>
+                  {infoChunk2.map((info) => (
+                    <li key={info.id}>
+                      <span>{info.title}: </span> {info.detail}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -92,10 +80,27 @@ const About = () => {
 
         <div className='skills-container'>
           <div className='skills-container__title'>My Skills</div>
-          <ul>
-            <li></li>
+          <ul className='skills-list'>
+            {skills.map((skill) => (
+              <li key={skill.id} title={skill.title}>
+                <a
+                  href={skill.redirect_url}
+                  className='skills-list__item'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <img
+                    src={skill.image_url}
+                    alt={skill.title}
+                    className='skill-image'
+                  />
+                </a>
+              </li>
+            ))}
           </ul>
+          {/* /skills-list */}
         </div>
+        {/* /skills-container */}
       </div>
       {/* section-container */}
     </section>

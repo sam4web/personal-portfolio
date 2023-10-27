@@ -38,6 +38,7 @@
 
   .social-container {
     flex-basis: 200px;
+
     @include responsive-medium {
       flex-basis: 150px;
     }
@@ -78,6 +79,10 @@
     font-weight: 300;
     padding-top: 35px;
     border-top: 1px solid $white;
+
+    @include responsive-medium {
+      text-align: left;
+    }
 
     a {
       color: $white;
