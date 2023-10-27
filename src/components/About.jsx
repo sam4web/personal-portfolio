@@ -1,6 +1,6 @@
 import { aboutImage } from '../assets';
 import { createSocialIcon } from '../utils';
-import { socialInfo } from '../data';
+import { socialInfo } from '../db/data.json';
 
 const About = () => {
   return (
@@ -35,6 +35,7 @@ const About = () => {
                 sapiente?
               </p>
               {/* /info-desc */}
+
               <ul className='social-icons'>
                 {socialInfo.map((social) => (
                   <li key={social.id}>
