@@ -148,5 +148,28 @@
       "redirect_url": "https://git-scm.com/",
       "image_url": "https://img.icons8.com/color/96/git.png"
     }
+  ],
+
+  "contactAddress": [
+    {
+      "id": 0,
+      "title": "phone",
+      "info": "+977 9860334526",
+      "href": "tel:+9779860334526",
+      "icon": "PhoneIcon"
+    },
+    {
+      "id": 1,
+      "title": "email",
+      "info": "sijal.m06@gmail.com",
+      "href": "mailto:sijal.m06@gmail.com",
+      "icon": "MailIcon"
+    },
+    {
+      "id": 2,
+      "title": "location",
+      "info": "Kalanki, Kathmandu, Nepal",
+      "icon": "LocationIcon"
+    }
   ]
 }

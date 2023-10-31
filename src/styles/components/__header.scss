@@ -27,6 +27,7 @@
     text-align: left;
     margin: auto;
     transition: padding 200ms linear;
+    padding: 35px 20px;
 
     @include responsive-medium {
       @include header-scroll-styles;
@@ -65,7 +66,7 @@
       margin: 0 15px;
 
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-4px);
       }
 
       @include responsive-medium {

@@ -1,4 +1,4 @@
-import { createSocialIcon } from '../utils';
+import { createReactIcon } from '../utils';
 import { socialInfo } from '../db/data.json';
 
 const Footer = () => {
@@ -9,8 +9,9 @@ const Footer = () => {
           <div className='info-container'>
             <h3 className='footer-title'>Sijal Manandhar</h3>
             <p className='info-desc'>
-              Frontend focused <strong> Web Developer </strong> designing and
-              developing front-end of Websites and Web Applications.
+              A <strong>web developer</strong> specializing in frontend design
+              and development for web applications. Dedicated to creating
+              user-friendly digital experiences.
             </p>
           </div>
           {/* info-container */}
@@ -21,7 +22,7 @@ const Footer = () => {
               {socialInfo.map((social) => (
                 <li key={social.id}>
                   <a href={social.url} title={social.title}>
-                    {createSocialIcon(social.icon)}
+                    {createReactIcon(social.icon)}
                   </a>
                 </li>
               ))}

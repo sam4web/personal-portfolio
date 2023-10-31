@@ -8,10 +8,13 @@ import {
   FiChrome,
   FiTwitter,
   FiYoutube,
+  FiPhone,
+  FiMail,
   FiGlobe,
 } from 'react-icons/fi';
+import { SlLocationPin } from 'react-icons/sl';
 
-const SOCIAL_ICONS = {
+const ICONS_LIST = {
   FacebookIcon: FiFacebook,
   InstagramIcon: FiInstagram,
   LinkedinIcon: FiLinkedin,
@@ -20,13 +23,15 @@ const SOCIAL_ICONS = {
   ChromeIcon: FiChrome,
   YoutubeIcon: FiYoutube,
   TwitterIcon: FiTwitter,
+  PhoneIcon: FiPhone,
+  MailIcon: FiMail,
+  LocationIcon: SlLocationPin,
   GlobeIcon: FiGlobe,
 };
 
-const createSocialIcon = (icon) => {
-  if (SOCIAL_ICONS[icon] !== undefined)
-    return createElement(SOCIAL_ICONS[icon]);
-  else return createElement(SOCIAL_ICONS['GlobeIcon']);
+const createReactIcon = (icon) => {
+  if (ICONS_LIST[icon] !== undefined) return createElement(ICONS_LIST[icon]);
+  else return createElement(ICONS_LIST['GlobeIcon']);
 };
 
-export default createSocialIcon;
+export default createReactIcon;

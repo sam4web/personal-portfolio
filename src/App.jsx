@@ -5,6 +5,7 @@ import {
   Footer,
   Header,
   Hero,
+  Service,
   Portfolio,
 } from './components';
 
@@ -15,7 +16,8 @@ const App = () => {
       <main>
         <Hero />
         <About />
-        <Portfolio />
+        {/* <Service /> */}
+        {/* <Portfolio /> */}
         <Contact />
       </main>
       <Footer />

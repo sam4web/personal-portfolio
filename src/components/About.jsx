@@ -1,5 +1,5 @@
 import { aboutImage } from '../assets';
-import { createSocialIcon } from '../utils';
+import { createReactIcon } from '../utils';
 import { socialInfo, personalInfo as infoArr, skills } from '../db/data.json';
 
 const About = () => {
@@ -43,7 +43,7 @@ const About = () => {
                 {socialInfo.map((social) => (
                   <li key={social.id}>
                     <a href={social.url} title={social.title}>
-                      {createSocialIcon(social.icon)}
+                      {createReactIcon(social.icon)}
                     </a>
                   </li>
                 ))}

@@ -1,3 +1,3 @@
-import createSocialIcon from './social_icons';
+import createReactIcon from './createReactIcon.js';
 
-export { createSocialIcon };
+export { createReactIcon };
