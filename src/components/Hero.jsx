@@ -40,7 +40,7 @@ const Hero = () => {
         to='about'
         spy={true}
         smooth={true}
-        offset={-70}
+        offset={-20}
         duration={10}
       >
         <button className='arrow-down'>
