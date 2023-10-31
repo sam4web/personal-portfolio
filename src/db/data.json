@@ -54,12 +54,14 @@
     {
       "id": 6,
       "title": "phone",
-      "detail": "+977 9860334526"
+      "detail": "+977 9860334526",
+      "href": "tel:+9779860334526"
     },
     {
       "id": 7,
       "title": "email",
-      "detail": "sijal.m06@gmail.com"
+      "detail": "sijal.m06@gmail.com",
+      "href": "mailto:sijal.m06@gmail.com"
     },
     {
       "id": 8,
@@ -129,19 +131,19 @@
       "image_url": "https://img.icons8.com/color/96/express-js.png"
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "mysql",
       "redirect_url": "https://www.mysql.com/",
       "image_url": "https://img.icons8.com/color/96/mysql-logo.png"
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "firebase",
       "redirect_url": "https://firebase.google.com/",
       "image_url": "https://img.icons8.com/color/96/firebase.png"
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "git",
       "redirect_url": "https://git-scm.com/",
       "image_url": "https://img.icons8.com/color/96/git.png"

@@ -2,15 +2,18 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 35px 20px;
+  padding: 70px 20px;
 
   @include responsive-medium {
-    padding: 30px 15px;
+    padding: 45px 15px;
   }
 
-  &:hover .section-title::after {
-    width: 40%;
-    background-color: $primary-color;
+  &:hover .section-subtitle {
+    font-weight: 600;
+
+    &::after {
+      width: 60px;
+    }
   }
 
   .section-subtitle {
@@ -26,7 +29,7 @@
       bottom: 50%;
       transform: translateY(50%);
       width: 45px;
-      left: 13.5%;
+      margin-left: 20px;
       height: 2px;
       border-radius: 40px;
       background-color: $primary-color;
@@ -57,9 +60,9 @@
 }
 
 .social-icons {
-  margin-top: 10px;
   @include flex(flex-start);
   gap: 13px;
+  margin-top: 10px;
 
   li a {
     color: $light-grey;

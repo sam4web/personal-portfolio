@@ -64,6 +64,10 @@
     &-item {
       margin: 0 15px;
 
+      &:hover {
+        transform: translateY(-5px);
+      }
+
       @include responsive-medium {
         margin: 0 10px;
       }
@@ -77,28 +81,6 @@
 
       &__active {
         color: $primary-color;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2.6px;
-        border-radius: 40px;
-        background-color: $primary-color;
-        transition: inherit;
-      }
-
-      &:hover,
-      &:focus {
-        color: $primary-color;
-
-        &::after {
-          width: 40%;
-        }
       }
     }
   }

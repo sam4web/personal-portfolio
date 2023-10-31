@@ -33,9 +33,8 @@ const Footer = () => {
         {/* footer-top */}
 
         <div className='footer-bottom'>
-          &copy; Copyright
-          <script>document.write(new Date().getFullYear());</script>. Made by
-          <a href='#'>Sijal Manandhar</a>
+          &copy; Copyright {new Date().getFullYear()}. Made by{' '}
+          <a href='https://github.com/sam4web/'>Sam4Web</a>.
         </div>
         {/* footer-bottom  */}
       </div>

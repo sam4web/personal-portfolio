@@ -60,14 +60,24 @@ const About = () => {
                 <ul>
                   {infoChunk1.map((info) => (
                     <li key={info.id}>
-                      <span>{info.title}: </span> {info.detail}
+                      <span>{info.title}: </span>
+                      {info.href ? (
+                        <a href={info.href}>{info.detail}</a>
+                      ) : (
+                        info.detail
+                      )}
                     </li>
                   ))}
                 </ul>
                 <ul>
                   {infoChunk2.map((info) => (
                     <li key={info.id}>
-                      <span>{info.title}: </span> {info.detail}
+                      <span>{info.title}: </span>
+                      {info.href ? (
+                        <a href={info.href}>{info.detail}</a>
+                      ) : (
+                        info.detail
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -91,6 +101,7 @@ const About = () => {
                 >
                   <img
                     src={skill.image_url}
+                    title={skill.title}
                     alt={skill.title}
                     className='skill-image'
                   />

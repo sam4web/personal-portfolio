@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Hero,
-  Projects,
+  Portfolio,
 } from './components';
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
       <main>
         <Hero />
         <About />
-        <Projects />
+        <Portfolio />
         <Contact />
       </main>
       <Footer />

@@ -4,20 +4,25 @@
   .content-container {
     @include grid(60px);
     grid-template-columns: repeat(2, 1fr);
-    margin: 45px 0;
+    margin: 50px 0;
     text-align: left;
+
+    @include responsive-large {
+      gap: 30px;
+    }
 
     @include responsive-medium {
       grid-template-columns: 1fr;
+      gap: 20px;
       grid-template-rows: repeat(2, 1fr);
       max-width: 500px;
-      margin: 40px auto;
+      margin: 45px auto;
     }
   }
 
   .line-break {
     width: 100%;
-    margin: 25px 0;
+    margin: 30px 0;
   }
 
   .content__image {
@@ -26,6 +31,18 @@
     background-position: 20%;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background-image: linear-gradient(45deg, $primary-color, $primary-dark);
+      opacity: 0.4;
+    }
   }
 
   .content__info {
@@ -79,6 +96,12 @@
 
         li {
           padding: 6px 0;
+          font-weight: 500;
+
+          a {
+            color: $primary-dark;
+            text-decoration: underline;
+          }
 
           span {
             color: $dark-grey;
@@ -101,10 +124,14 @@
     }
 
     .skills-list {
-      @include flex(flex-start);
-      gap: 10px;
+      @include flex(center);
+      gap: 15px;
       flex-wrap: wrap;
       margin-top: 20px;
+
+      @include responsive-medium {
+        column-gap: 8px;
+      }
 
       &__item {
         padding: 0 5px;
@@ -118,8 +145,13 @@
       }
 
       .skill-image {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
+
+        @include responsive-medium {
+          width: 70px;
+          height: 70px;
+        }
       }
     }
   }
