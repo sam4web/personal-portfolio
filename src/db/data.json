@@ -25,6 +25,7 @@
       "url": "https://twitter.com"
     }
   ],
+
   "personalInfo": [
     {
       "id": 1,
@@ -69,6 +70,7 @@
       "detail": "English, Nepali"
     }
   ],
+
   "skills": [
     {
       "id": 1,
@@ -170,6 +172,24 @@
       "title": "location",
       "info": "Kalanki, Kathmandu, Nepal",
       "icon": "LocationIcon"
+    }
+  ],
+
+  "services": [
+    {
+      "id": 0,
+      "title": "Web Development",
+      "description": "I possess the expertise to craft tailored, user-friendly websites, personalized to your needs. It would be my honor to assist you in building your online presence."
+    },
+    {
+      "id": 1,
+      "title": "UI/UX Design",
+      "description": "I am capable of providing meticulous UI/UX design services for your esteemed project. It would be my privilege to enhance your user experience with thoughtful and creative design solutions."
+    },
+    {
+      "id": 2,
+      "title": "Web Development",
+      "description": "I am skilled in programming and software development, ready to serve your needs diligently. It would be my honor to contribute to your project with my expertise."
     }
   ]
 }
