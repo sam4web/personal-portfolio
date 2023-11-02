@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, animateScroll } from 'react-scroll';
-import { navLinks } from '../constants';
+import { NAV_LINKS } from '../constants';
 
 const Header = () => {
   const [headerToggleActive, setHeaderToggleActive] = useState(false);
@@ -47,7 +47,7 @@ const Header = () => {
 
         <nav className='nav'>
           <ul className='nav-list'>
-            {navLinks.map((link, idx) => (
+            {NAV_LINKS.map((link, idx) => (
               <li className='nav-item' key={idx}>
                 <Link
                   className='nav-link'

@@ -175,14 +175,7 @@
     }
   ],
 
-  "projectTags": [
-    "html & css",
-    "template",
-    "tailwindcss",
-    "react",
-    "django",
-    "frontend mentor"
-  ],
+  "projectTags": ["html & css", "template", "react", "django"],
 
   "projectList": [
     {

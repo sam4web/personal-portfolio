@@ -64,7 +64,7 @@
     border: none;
     cursor: pointer;
     border-radius: 40px;
-    animation: arrow-scroll-animation 1350ms linear infinite forwards;
+    animation: arrow-scroll-animation 1300ms ease-in-out infinite forwards;
   }
 }
 
@@ -72,10 +72,6 @@
   0% {
     bottom: 60px;
     background-color: $primary-color;
-  }
-  95% {
-    background-color: transparent;
-    color: transparent;
   }
   100% {
     bottom: 20px;
