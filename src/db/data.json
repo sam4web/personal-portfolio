@@ -4,25 +4,31 @@
       "id": 1,
       "title": "facebook",
       "icon": "FacebookIcon",
-      "url": "https://facebook.com"
+      "url": "https://www.facebook.com/profile.php?id=100084842116288"
     },
     {
       "id": 2,
       "title": "instagram",
       "icon": "InstagramIcon",
-      "url": "https://instagram.com"
+      "url": "https://www.instagram.com/czal_mdhr/"
     },
     {
       "id": 3,
       "title": "github",
       "icon": "GithubIcon",
-      "url": "https://github.com"
+      "url": "https://github.com/sam4web/"
     },
     {
       "id": 4,
       "title": "twitter",
       "icon": "TwitterIcon",
       "url": "https://twitter.com"
+    },
+    {
+      "id": 5,
+      "title": "linkedin",
+      "icon": "LinkedinIcon",
+      "url": "https://linkedin.com"
     }
   ],
 

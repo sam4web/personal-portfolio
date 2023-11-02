@@ -30,19 +30,25 @@ const About = () => {
                 <span>Nepal</span>
               </h4>
               <p className='content__info-desc'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                eius, harum neque maxime ratione inventore obcaecati velit
-                sapiente mollitia pariatur ipsam impedit quisquam. Ea inventore
-                voluptatibus est repellendus, magnam animi, tempora corrupti
-                iure numquam laudantium quisquam ipsum commodi? Beatae,
-                sapiente?
+                I am a dedicated Front-end Web Developer with a focus on
+                designing and developing the front-end of websites and web
+                applications. At present, I am actively seeking a conducive
+                working environment that will enable me to enhance my skills and
+                gain valuable insights into the dynamic technology industry. I
+                am keen on continuous learning and am in search of opportunities
+                that will foster my professional growth.
               </p>
               {/* /info-desc */}
 
               <ul className='social-icons'>
                 {socialInfo.map((social) => (
                   <li key={social.id}>
-                    <a href={social.url} title={social.title}>
+                    <a
+                      href={social.url}
+                      title={social.title}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       {createReactIcon(social.icon)}
                     </a>
                   </li>

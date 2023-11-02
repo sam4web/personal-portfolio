@@ -21,7 +21,12 @@ const Footer = () => {
             <ul className='social-icons'>
               {socialInfo.map((social) => (
                 <li key={social.id}>
-                  <a href={social.url} title={social.title}>
+                  <a
+                    href={social.url}
+                    title={social.title}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     {createReactIcon(social.icon)}
                   </a>
                 </li>
