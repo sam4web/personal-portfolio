@@ -30,13 +30,14 @@ const About = () => {
                 <span>Nepal</span>
               </h4>
               <p className='content__info-desc'>
-                I am a dedicated Front-end Web Developer with a focus on
-                designing and developing the front-end of websites and web
-                applications. At present, I am actively seeking a conducive
-                working environment that will enable me to enhance my skills and
-                gain valuable insights into the dynamic technology industry. I
-                am keen on continuous learning and am in search of opportunities
-                that will foster my professional growth.
+                I&#39;m a dedicated Front-end Web Developer with 2 years of
+                experience in designing and developing websites and web
+                applications. Actively seeking a dynamic work environment to
+                refine my skills, I bring a passion for continuous learning and
+                innovation. My proven track record showcases a commitment to
+                excellence, adaptability, and a proactive approach to
+                problem-solving. Eager to contribute my skills and enthusiasm to
+                a forward-thinking team.
               </p>
               {/* /info-desc */}
 
